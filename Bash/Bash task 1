@@ -1,0 +1,10 @@
+if [[ -d ~/Reports ]] || [[ -e /home/Hossamfathalla/Reports/report* ]]
+
+then
+        echo "dirc&file  exsist"
+else
+        mkdir ~/Reports
+        touch ~/Reports/report{000..365}-$(date +%y-%m-%d).xls
+        tar -czf Reports.tar Reports
+
+fi

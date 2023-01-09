@@ -13,3 +13,17 @@ new_character = 'k'
 str = str[:index] + new_character + str[index+1:]
 print(str)
  
+  
+  
+#replac using fun  
+def test(string,position,character):
+    north=list(string)
+    north[position]=character
+    string= ''.join(north)
+    print(string)
+
+x=input("enter your test: ")
+y=int(input("enter num: "))
+z=input("enter ur tw: ")
+test(x,y,z)
+

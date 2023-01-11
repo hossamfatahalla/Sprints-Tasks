@@ -9,4 +9,15 @@ def leap_year():
     else:
         print("pass")
 
+leap_year()
+
+#method 2
+def leap_year():
+    Year=int(input("enter year: "))
+    if ((Year % 400 == 0) or (Year % 100 != 0) and (Year % 4 == 0)):
+
+       print(leap )
+    else:
+        print( "not leap")
+
 leap_year()        

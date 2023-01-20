@@ -1,20 +1,21 @@
 import datetime
 import os
-with open( 'daily.csv' , 'a' ) as f:
+def dailyreport(list_contact):
 
-    name=input("enter your name: ")
-    phone=input("enter your num: ")
-    email=input("enter your email: ")
-    address=input("enter your address: ")
-    list_contact=[name,phone,email,address]
-    date_created = datetime.datetime.now().isoformat()
-    
-    
-    f.writelines([",".join([str(i) for i in [name,email,phone,address,date_created] ]) ])
-    
-    
+    with open( 'daily.csv' , 'a' ) as f:
+       name=input("enter your name: ")
+       phone=input("enter your num: ")
+       email=input("enter your email: ")
+       address=input("enter your address: ")
+       list_contact=[name,phone,email,address]
+       date_created = datetime.datetime.now().isoformat()
+       f.writelines([",".join([str(i) for i in [name,email,phone,address,date_created] ]) ])
+       return(list_contact)
+dailyreport(list_contact=[''])       
 
-
+    
+    
+    
     
 
 
